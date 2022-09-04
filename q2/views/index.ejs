@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Gallery</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h4>Nodejs file upload with MongoDB</h4>
+        </div>
+            <form action="/" method="post" enctype="multipart/form-data">
+                <input type="file" name="imgs" id="imgs" accept="image/*">
+                <input type="text" name="caption" id="caption" placeholder="Caption">
+                <button type="submit"> Upload<i class="fa fa-arrow-right"></i></button>
+            </form>
+        <div class="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="photo_grid">
+            <% if(images.length > 0) {%>
+                <% images.forEach(image => {%>
+                    <div class="photo">
+                        <img src="<%= image.url %>" alt="<%=image.alt%>"/>
+                        <p><%= image.caption %></p>
+                    </div>
+                <%})%>
+                <%} else {%>
+                    <div class="no_image">
+                        <p>No images found</p>
+                    </div>
+                <%}%>
+            </div>
+        </div>
+    </div>s
+</body>
+</html>

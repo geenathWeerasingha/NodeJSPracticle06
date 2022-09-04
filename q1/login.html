@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <title>Q1</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card_header">
+                <h1>Login Form</h1>
+            </div>
+                <form class="card_body" action="/login" method="POST">
+                    <input class="text_input" type="text" name="email" id="email" placeholder="Email Address">
+                    <input class="text_input" type="password" name="password" id="password" placeholder="Password">
+                    <div class="remember_me">
+                        <div>
+                            <input type="checkbox" name="remember_me" id="remember_me">
+                            <label for="remember_me">Remember me</label>
+                        </div>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <input class="btn" type="submit" value="Login">
+                    <p>Not a member? <a href="#">Signup now</a></p>
+                </form>
+        </div>
+    </div>
+</body>
+</html>
