@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <Link rel="stylesheet" href="styles.css"/>
+    <title>Doc Upload</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card_header">
+                <h4>Add documents</h4>
+            </div>
+            <form action="/" method="post" enctype="multipart/form-data">
+                <div class="input_group">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title">
+                </div>
+                <div class="input_group">
+                    <label for="doc">Attachments</label>
+                    <div class="attachment_box" id="attachment_box">
+                        <i class="fa fa-cloud-upload cloud_icon" aria-hidden="true"></i>
+                        <div class="attachment_text">
+                            <p>Attach your files here</p>
+                                <p>or</p>
+                            <label for="doc">Browse files</label>
+                        </div>
+                        <input type="file" name="doc" id="doc" accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" multiple>
+                    </div>
+                </div>
+                <div class="warning">
+                    <p>Accepted file type: .doc only</p>
+                    <p><i class="fa fa-lock"></i> secure</p>
+                </div>
+                <input type="submit" value="Create">
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        let file;
+        const attachmentBox = document.getElementById("attachment_box")
+        attachmentBox.addEventListener("dragover", (e) => {
+            e.preventDefault()
+        })
+        attachmentBox.addEventListener("drop", (e) => {
+            e.preventDefault()
+            file = e.dataTransfer.files[0]
+            console.log(file)
+        })
+    </script>
+</body>
+</html>

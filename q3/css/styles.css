@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #d1d5db;
+
+}
+
+.container {
+    max-width: 80%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card{
+    width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #0000001e;
+    
+}
+
+.card_header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 15px;
+    font-size: 1.2rem;
+    color: #616161;
+    border-bottom: 1px solid #ccc;
+}
+
+form {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"]{
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"]{
+    width: 100%;
+    margin: 1px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2563eb;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+.attachment_box{
+    margin: 10px 0;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #ccc;
+}
+
+p{
+    font-size: 0.9rem;
+    margin: 10px 0;
+    font-weight: 400;
+    color: #686868b5;
+}
+
+.cloud_icon {
+    font-size: 3rem;
+    color: #ccc;
+}
+
+.attachment_text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.attachment_text p {
+    margin: 2px 0;
+}
+.attachment_text label {
+    margin: 2px 0;
+    color: #2563eb;
+}
+
+.warning{
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
